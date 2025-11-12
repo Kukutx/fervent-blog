@@ -21,6 +21,7 @@ export type PostInput = {
   summary: string;
   content: string;
   coverImage?: string;
+  category?: string;
   tags?: string[];
   locale: string;
 };
@@ -134,3 +135,118 @@ export const subscribeToPost = (
       });
     },
   );
+
+// 获取所有分类
+export const getCategories = async (locale?: string): Promise<string[]> => {
+  const constraints = locale ? [where("locale", "==", locale)] : [];
+  const snapshot = await getDocs(query(postsCollection(), ...constraints));
+
+  const categoriesSet = new Set<string>();
+  snapshot.docs.forEach((doc) => {
+    const data = doc.data() as PostInput;
+    if (data.category) {
+      categoriesSet.add(data.category);
+    }
+  });
+
+  return Array.from(categoriesSet).sort();
+};
+
+// 获取所有标签
+export const getTags = async (locale?: string): Promise<string[]> => {
+  const constraints = locale ? [where("locale", "==", locale)] : [];
+  const snapshot = await getDocs(query(postsCollection(), ...constraints));
+
+  const tagsSet = new Set<string>();
+  snapshot.docs.forEach((doc) => {
+    const data = doc.data() as PostInput;
+    if (data.tags) {
+      data.tags.forEach((tag) => tagsSet.add(tag));
+    }
+  });
+
+  return Array.from(tagsSet).sort();
+};
+
+// 按分类订阅文章
+export const subscribeToPostsByCategory = (
+  category: string,
+  locale: string,
+  callback: (posts: Post[]) => void,
+) => {
+  const postsQuery = query(
+    postsCollection(),
+    where("category", "==", category),
+    where("locale", "==", locale),
+    orderBy("publishedAt", "desc"),
+  );
+
+  return onSnapshot(postsQuery, (snapshot) => {
+    const posts = snapshot.docs.map((docSnapshot) => ({
+      id: docSnapshot.id,
+      ...(docSnapshot.data() as PostInput & { publishedAt?: Timestamp }),
+    }));
+
+    callback(
+      posts.map((post) => ({
+        ...post,
+        publishedAt: post.publishedAt ?? Timestamp.now(),
+      })),
+    );
+  });
+};
+
+// 按标签订阅文章
+export const subscribeToPostsByTag = (
+  tag: string,
+  locale: string,
+  callback: (posts: Post[]) => void,
+) => {
+  const postsQuery = query(
+    postsCollection(),
+    where("tags", "array-contains", tag),
+    where("locale", "==", locale),
+    orderBy("publishedAt", "desc"),
+  );
+
+  return onSnapshot(postsQuery, (snapshot) => {
+    const posts = snapshot.docs.map((docSnapshot) => ({
+      id: docSnapshot.id,
+      ...(docSnapshot.data() as PostInput & { publishedAt?: Timestamp }),
+    }));
+
+    callback(
+      posts.map((post) => ({
+        ...post,
+        publishedAt: post.publishedAt ?? Timestamp.now(),
+      })),
+    );
+  });
+};
+
+// 搜索文章
+export const searchPosts = async (
+  searchTerm: string,
+  locale: string,
+): Promise<Post[]> => {
+  const snapshot = await getDocs(
+    query(postsCollection(), where("locale", "==", locale), orderBy("publishedAt", "desc")),
+  );
+
+  const posts = snapshot.docs.map((docSnapshot) => ({
+    id: docSnapshot.id,
+    ...(docSnapshot.data() as PostInput & { publishedAt?: Timestamp }),
+    publishedAt: (docSnapshot.data() as PostInput & { publishedAt?: Timestamp }).publishedAt ?? Timestamp.now(),
+  })) as Post[];
+
+  // 客户端搜索（标题、摘要、内容）
+  const searchTermLower = searchTerm.toLowerCase();
+  return posts.filter(
+    (post) =>
+      post.title.toLowerCase().includes(searchTermLower) ||
+      post.summary.toLowerCase().includes(searchTermLower) ||
+      post.content.toLowerCase().includes(searchTermLower) ||
+      post.tags?.some((tag) => tag.toLowerCase().includes(searchTermLower)) ||
+      post.category?.toLowerCase().includes(searchTermLower),
+  );
+};

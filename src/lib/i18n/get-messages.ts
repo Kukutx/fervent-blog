@@ -1,15 +1,16 @@
 import { notFound } from "next/navigation";
+import type { AbstractIntlMessages } from "next-intl";
 
 import { Locale, locales } from "./config";
 
-const messagesImports: Record<Locale, () => Promise<Record<string, unknown>>> = {
-  en: () => import("@/messages/en.json").then((mod) => mod.default),
-  zh: () => import("@/messages/zh.json").then((mod) => mod.default),
-  es: () => import("@/messages/es.json").then((mod) => mod.default),
-  fr: () => import("@/messages/fr.json").then((mod) => mod.default),
+const messagesImports: Record<Locale, () => Promise<AbstractIntlMessages>> = {
+  en: () => import("@/messages/en.json").then((mod) => mod.default as AbstractIntlMessages),
+  zh: () => import("@/messages/zh.json").then((mod) => mod.default as AbstractIntlMessages),
+  es: () => import("@/messages/es.json").then((mod) => mod.default as AbstractIntlMessages),
+  fr: () => import("@/messages/fr.json").then((mod) => mod.default as AbstractIntlMessages),
 };
 
-export const getMessages = async (locale: string) => {
+export const getMessages = async (locale: string): Promise<AbstractIntlMessages> => {
   if (!locales.includes(locale as Locale)) {
     notFound();
   }

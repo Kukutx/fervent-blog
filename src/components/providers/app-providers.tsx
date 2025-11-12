@@ -1,6 +1,7 @@
 "use client";
 
 import { NextIntlClientProvider } from "next-intl";
+import type { AbstractIntlMessages } from "next-intl";
 import { ReactNode } from "react";
 
 import { AuthProvider } from "./auth-provider";
@@ -8,7 +9,7 @@ import { AuthProvider } from "./auth-provider";
 type AppProvidersProps = {
   readonly children: ReactNode;
   readonly locale: string;
-  readonly messages: Record<string, unknown>;
+  readonly messages: AbstractIntlMessages;
 };
 
 export const AppProviders = ({
