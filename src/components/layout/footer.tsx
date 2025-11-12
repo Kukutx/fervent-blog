@@ -56,7 +56,6 @@ export const Footer = () => {
         { href: getLocalizedHref("/about", locale), label: t("navigation.about") },
         { href: getLocalizedHref("/links", locale), label: t("navigation.links") },
         { href: getLocalizedHref("/portfolio", locale), label: t("navigation.portfolio") },
-        { href: getLocalizedHref("/resume", locale), label: t("navigation.resume") },
       ],
     },
     {

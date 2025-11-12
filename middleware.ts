@@ -9,11 +9,11 @@ export default createMiddleware({
 });
 
 export const config = {
-  // 匹配所有路径，除了静态文件和API路由
+  // 匹配所有路径，除了静态文件、API路由和_next
   matcher: [
-    // 匹配所有路径
+    // 匹配所有路径，排除静态文件、API和内部Next.js路径
     "/((?!api|_next|_vercel|.*\\..*).*)",
-    // 可选：匹配根路径
+    // 明确匹配根路径
     "/",
   ],
 };

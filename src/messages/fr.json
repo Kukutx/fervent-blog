@@ -1,105 +1,206 @@
 {
-  "site.title": "Studio Inspiré de Kuku",
-  "site.subtitle": "Un espace créatif réunissant blog, portfolio et outils.",
-  "navigation.blog": "Blog",
-  "navigation.portfolio": "Portfolio",
-  "navigation.resume": "CV",
-  "navigation.tools": "Outils",
-  "navigation.admin": "Admin",
-  "auth.login": "Se connecter avec GitHub",
-  "auth.logout": "Se déconnecter",
-  "hero.headline": "Récits soignés et design ludique.",
-  "hero.subheadline": "Découvrez articles, expériences et CV vivant propulsés par Firebase.",
-  "hero.cta": "Voir les articles récents",
-  "hero.stack": "Firebase · Next.js · Auth GitHub",
-  "common.loading": "Chargement…",
-  "common.menu": "Menu",
-  "common.refresh": "Rafraîchir",
-  "common.toggleTheme": "Changer de thème",
-  "posts.recent": "Dernières histoires",
-  "posts.empty": "Aucun article pour le moment. Publiez le premier depuis le panneau.",
-  "posts.readMore": "Lire la suite →",
-  "posts.notFound.title": "Article introuvable",
-  "posts.notFound.description": "Ce récit est indisponible dans la langue actuelle ou a été dépublié.",
-  "portfolio.title": "Projets sélectionnés",
-  "portfolio.description": "Galerie de produits livrés, recherches visuelles et projets open-source.",
-  "portfolio.viewMore": "Explorer les études de cas",
-  "portfolio.projects": {
-    "aurora": {
-      "title": "Aurora Interfaces",
-      "summary": "Un système de design multiplateforme pour expérimenter rapidement des visuels génératifs.",
-      "role": "Design produit · Direction créative"
-    },
-    "atlas": {
-      "title": "Atlas Explorer",
-      "summary": "Une expérience narrative spatiale mêlant cartes, longs formats et médias intégrés.",
-      "role": "Recherche UX · Développement frontend"
-    },
-    "palette": {
-      "title": "Palette Sketch",
-      "summary": "Un outil ludique de couleur pour les designers, avec partage via Firebase.",
-      "role": "Programmation créative · Stratégie produit"
+  "site": {
+    "title": "Studio Inspiré de Kuku",
+    "subtitle": "Un espace créatif réunissant blog, portfolio et outils."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "archives": "Archives",
+    "categories": "Catégories",
+    "allCategories": "Toutes les catégories",
+    "tags": "Étiquettes",
+    "about": "À propos",
+    "links": "Liens",
+    "portfolio": "Portfolio",
+    "resume": "CV",
+    "tools": "Outils",
+    "admin": "Admin"
+  },
+  "auth": {
+    "login": "Se connecter avec GitHub",
+    "logout": "Se déconnecter"
+  },
+  "hero": {
+    "headline": "Récits soignés et design ludique.",
+    "subheadline": "Découvrez articles, expériences et CV vivant propulsés par Firebase.",
+    "cta": "Voir les articles récents",
+    "stack": "Firebase · Next.js · Auth GitHub"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "menu": "Menu",
+    "refresh": "Rafraîchir",
+    "toggleTheme": "Changer de thème",
+    "search": "Rechercher"
+  },
+  "search": {
+    "placeholder": "Rechercher des articles...",
+    "noResults": "Aucun article trouvé",
+    "found": "Trouvé",
+    "results": "résultats",
+    "hint": "Entrez des mots-clés pour rechercher des articles",
+    "tips": "Astuce : Rechercher par titre, contenu ou étiquettes",
+    "close": "Fermer"
+  },
+  "posts": {
+    "recent": "Dernières histoires",
+    "empty": "Aucun article pour le moment. Publiez le premier depuis le panneau.",
+    "readMore": "Lire la suite →",
+    "notFound": {
+      "title": "Article introuvable",
+      "description": "Ce récit est indisponible dans la langue actuelle ou a été dépublié."
     }
   },
-  "resume.title": "Curriculum vitae",
-  "resume.subtitle": "Synthèse des compétences, expériences et formations.",
-  "resume.download": "Télécharger le PDF",
-  "resume.experienceTitle": "Expérience",
-  "resume.educationTitle": "Formation",
-  "resume.experience": {
-    "nebula": {
-      "company": "Nebula Collective",
-      "role": "Lead Product Designer",
-      "period": "2022 — Aujourd'hui",
-      "description": "Pilotage d'équipes pluridisciplinaires pour créer des expériences éditoriales immersives et des produits de datavisualisation."
-    },
-    "lumen": {
-      "company": "Studio Lumen",
-      "role": "Senior UX Engineer",
-      "period": "2018 — 2022",
-      "description": "Prototypage d'interfaces animées, déploiement de design systems et lien entre design et engineering."
+  "archives": {
+    "title": "Archives",
+    "description": "Parcourir tous les articles par chronologie",
+    "total": "Total",
+    "articles": "articles",
+    "empty": "Aucun article archivé"
+  },
+  "categories": {
+    "title": "Catégories",
+    "description": "Parcourir les articles par catégorie",
+    "total": "Total",
+    "items": "catégories",
+    "articles": "articles",
+    "empty": "Aucune catégorie",
+    "noArticles": "Aucun article dans cette catégorie"
+  },
+  "tags": {
+    "title": "Étiquettes",
+    "description": "Parcourir les articles par étiquette",
+    "total": "Total",
+    "items": "étiquettes",
+    "articles": "articles",
+    "list": "Liste des étiquettes",
+    "empty": "Aucune étiquette",
+    "noArticles": "Aucun article avec cette étiquette"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Bonjour, le monde !",
+    "introduction": "Introduction",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "built": "Construit avec"
+  },
+  "links": {
+    "title": "Liens d'amis",
+    "description": "Recommandations de blogs de qualité",
+    "applyTitle": "Demander un lien",
+    "applyDescription": "Bienvenue pour échanger des liens. Veuillez respecter les conditions suivantes :",
+    "empty": "Aucun lien d'ami pour le moment"
+  },
+  "firebaseSetup": {
+    "title": "Configuration Firebase",
+    "description": "Configurer Firebase pour activer les fonctionnalités du blog"
+  },
+  "portfolio": {
+    "title": "Projets sélectionnés",
+    "description": "Galerie de produits livrés, recherches visuelles et projets open-source.",
+    "viewMore": "Explorer les études de cas",
+    "projects": {
+      "aurora": {
+        "title": "Aurora Interfaces",
+        "summary": "Un système de design multiplateforme pour expérimenter rapidement des visuels génératifs.",
+        "role": "Design produit · Direction créative"
+      },
+      "atlas": {
+        "title": "Atlas Explorer",
+        "summary": "Une expérience narrative spatiale mêlant cartes, longs formats et médias intégrés.",
+        "role": "Recherche UX · Développement frontend"
+      },
+      "palette": {
+        "title": "Palette Sketch",
+        "summary": "Un outil ludique de couleur pour les designers, avec partage via Firebase.",
+        "role": "Programmation créative · Stratégie produit"
+      }
     }
   },
-  "resume.education": {
-    "parsons": {
-      "school": "Parsons School of Design",
-      "degree": "MFA Design + Technology",
-      "year": "2018"
+  "resume": {
+    "title": "Curriculum vitae",
+    "subtitle": "Synthèse des compétences, expériences et formations.",
+    "download": "Télécharger le PDF",
+    "experienceTitle": "Expérience",
+    "educationTitle": "Formation",
+    "experience": {
+      "nebula": {
+        "company": "Nebula Collective",
+        "role": "Lead Product Designer",
+        "period": "2022 — Aujourd'hui",
+        "description": "Pilotage d'équipes pluridisciplinaires pour créer des expériences éditoriales immersives et des produits de datavisualisation."
+      },
+      "lumen": {
+        "company": "Studio Lumen",
+        "role": "Senior UX Engineer",
+        "period": "2018 — 2022",
+        "description": "Prototypage d'interfaces animées, déploiement de design systems et lien entre design et engineering."
+      }
     },
-    "tongji": {
-      "school": "Université Tongji",
-      "degree": "BDes Design industriel",
-      "year": "2015"
+    "education": {
+      "parsons": {
+        "school": "Parsons School of Design",
+        "degree": "MFA Design + Technology",
+        "year": "2018"
+      },
+      "tongji": {
+        "school": "Université Tongji",
+        "degree": "BDes Design industriel",
+        "year": "2015"
+      }
     }
   },
-  "tools.title": "Boîte à outils créative",
-  "tools.description": "Mini utilitaires pour rythmer les workflows quotidiens.",
-  "tools.paletteTitle": "Générateur de palette",
-  "tools.wordTitle": "Atelier d'écriture",
-  "tools.wordSubtitle": "Suivez longueur et rythme de votre texte pendant la rédaction.",
-  "tools.wordPlaceholder": "Écrivez ou collez votre texte ici…",
-  "tools.wordsLabel": "Mots · {count}",
-  "tools.charactersLabel": "Caractères · {count}",
-  "tools.timestampTitle": "Convertisseur d'horodatage",
-  "tools.timestampDescription": "Convertissez les timestamps Unix en format lisible.",
-  "tools.timestampPlaceholder": "1693429342",
-  "admin.title": "Studio personnel de publication",
-  "admin.subtitle": "Seul le propriétaire authentifié peut gérer le contenu.",
-  "admin.create": "Créer un article",
-  "admin.update": "Mettre à jour",
-  "admin.delete": "Supprimer",
-  "admin.reset": "Réinitialiser le formulaire",
-  "admin.form.title": "Titre",
-  "admin.form.slug": "Slug",
-  "admin.form.summary": "Résumé",
-  "admin.form.content": "Contenu",
-  "admin.form.coverImage": "URL de couverture",
-  "admin.form.tags": "Étiquettes (séparées par des virgules)",
-  "admin.form.locale": "Langue",
-  "admin.save": "Enregistrer",
-  "admin.allowedOnly": "Seul le propriétaire autorisé peut gérer les articles.",
-  "admin.activeLocales": "Langues actives : {locales}",
-  "admin.error.unknown": "Erreur inattendue. Veuillez réessayer.",
-  "footer.copyright": "© {year} Kuku Studio · Créé avec Firebase et Next.js",
-  "language.label": "Langue"
+  "tools": {
+    "title": "Boîte à outils créative",
+    "description": "Mini utilitaires pour rythmer les workflows quotidiens.",
+    "paletteTitle": "Générateur de palette",
+    "wordTitle": "Atelier d'écriture",
+    "wordSubtitle": "Suivez longueur et rythme de votre texte pendant la rédaction.",
+    "wordPlaceholder": "Écrivez ou collez votre texte ici…",
+    "wordsLabel": "Mots · {count}",
+    "charactersLabel": "Caractères · {count}",
+    "timestampTitle": "Convertisseur d'horodatage",
+    "timestampDescription": "Convertissez les timestamps Unix en format lisible.",
+    "timestampPlaceholder": "1693429342"
+  },
+  "admin": {
+    "title": "Studio personnel de publication",
+    "subtitle": "Seul le propriétaire authentifié peut gérer le contenu.",
+    "create": "Créer un article",
+    "update": "Mettre à jour",
+    "delete": "Supprimer",
+    "reset": "Réinitialiser le formulaire",
+    "form": {
+      "title": "Titre",
+      "slug": "Slug",
+      "summary": "Résumé",
+      "content": "Contenu",
+      "coverImage": "URL de couverture",
+      "tags": "Étiquettes (séparées par des virgules)",
+      "locale": "Langue"
+    },
+    "save": "Enregistrer",
+    "allowedOnly": "Seul le propriétaire autorisé peut gérer les articles.",
+    "activeLocales": "Langues actives : {locales}",
+    "error": {
+      "unknown": "Erreur inattendue. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Kuku Studio · Créé avec Firebase et Next.js",
+    "navigation": "Navigation",
+    "about": "À propos",
+    "resources": "Ressources",
+    "siteDescription": "Un espace créatif réunissant blog, portfolio et outils",
+    "running": "Fonctionne depuis",
+    "days": "jours",
+    "allRightsReserved": "Tous droits réservés",
+    "builtWith": "Construit avec",
+    "firebaseSetup": "Configuration Firebase"
+  },
+  "language": {
+    "label": "Langue"
+  }
 }

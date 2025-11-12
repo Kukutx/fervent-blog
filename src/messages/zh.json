@@ -1,162 +1,206 @@
 {
-  "site.title": "Kuku 灵感工作室",
-  "site.subtitle": "一个集合文字、作品与工具的创意空间。",
-  "navigation.home": "首页",
-  "navigation.blog": "博客",
-  "navigation.archives": "归档",
-  "navigation.categories": "分类",
-  "navigation.allCategories": "全部分类",
-  "navigation.tags": "标签",
-  "navigation.about": "关于",
-  "navigation.links": "友链",
-  "navigation.portfolio": "作品集",
-  "navigation.resume": "个人简历",
-  "navigation.tools": "小工具",
-  "navigation.admin": "后台",
-  "auth.login": "使用 GitHub 登录",
-  "auth.logout": "退出登录",
-  "hero.headline": "精致内容与玩味设计的结合。",
-  "hero.subheadline": "浏览文章、实验作品与实时更新的简历，全部由安全的 Firebase 流程驱动。",
-  "hero.cta": "查看最新文章",
-  "hero.stack": "Firebase · Next.js · GitHub 授权",
-  "common.loading": "加载中…",
-  "common.menu": "菜单",
-  "common.refresh": "刷新",
-  "common.toggleTheme": "切换主题",
-  "common.search": "搜索",
-  "search.placeholder": "搜索文章...",
-  "search.noResults": "未找到相关文章",
-  "search.found": "找到",
-  "search.results": "个结果",
-  "search.hint": "输入关键词搜索文章",
-  "search.tips": "提示：支持搜索标题、内容、标签",
-  "search.close": "关闭",
-  "posts.recent": "最新文章",
-  "posts.empty": "尚无文章，快到管理面板发布第一篇吧！",
-  "posts.readMore": "阅读全文 →",
-  "posts.notFound.title": "未找到文章",
-  "posts.notFound.description": "当前语言暂无该内容，或文章已下线。",
-  "archives.title": "文章归档",
-  "archives.description": "按时间线浏览所有文章",
-  "archives.total": "共",
-  "archives.articles": "篇文章",
-  "archives.empty": "暂无归档文章",
-  "categories.title": "文章分类",
-  "categories.description": "按分类浏览文章",
-  "categories.total": "共",
-  "categories.items": "个分类",
-  "categories.articles": "篇文章",
-  "categories.empty": "暂无分类",
-  "categories.noArticles": "该分类下暂无文章",
-  "tags.title": "标签云",
-  "tags.description": "按标签浏览文章",
-  "tags.total": "共",
-  "tags.items": "个标签",
-  "tags.articles": "篇文章",
-  "tags.list": "标签列表",
-  "tags.empty": "暂无标签",
-  "tags.noArticles": "该标签下暂无文章",
-  "about.title": "关于我",
-  "about.subtitle": "Hello, World!",
-  "about.introduction": "自我介绍",
-  "about.skills": "技能栈",
-  "about.contact": "联系方式",
-  "about.built": "本站使用",
-  "links.title": "友情链接",
-  "links.description": "优质博客推荐",
-  "links.applyTitle": "申请友链",
-  "links.applyDescription": "欢迎交换友链，请满足以下条件：",
-  "links.empty": "暂无友链",
-  "firebaseSetup.title": "Firebase 配置",
-  "firebaseSetup.description": "配置 Firebase 以启用博客功能",
-  "portfolio.title": "精选案例",
-  "portfolio.description": "展示已上线产品、视觉探索与开源尝试的精选合集。",
-  "portfolio.viewMore": "查看完整案例",
-  "portfolio.projects": {
-    "aurora": {
-      "title": "Aurora Interfaces",
-      "summary": "一套支持跨平台的设计系统，便于快速尝试生成式视觉效果。",
-      "role": "产品设计 · 创意统筹"
-    },
-    "atlas": {
-      "title": "Atlas Explorer",
-      "summary": "结合地图、长篇内容与多媒体的空间叙事体验。",
-      "role": "用户研究 · 前端开发"
-    },
-    "palette": {
-      "title": "Palette Sketch",
-      "summary": "面向设计师的趣味配色工具，并支持基于 Firebase 的共享看板。",
-      "role": "创意编程 · 产品策略"
+  "site": {
+    "title": "Kuku 灵感工作室",
+    "subtitle": "一个集合文字、作品与工具的创意空间。"
+  },
+  "navigation": {
+    "home": "首页",
+    "blog": "博客",
+    "archives": "归档",
+    "categories": "分类",
+    "allCategories": "全部分类",
+    "tags": "标签",
+    "about": "关于",
+    "links": "友链",
+    "portfolio": "作品集",
+    "resume": "个人简历",
+    "tools": "小工具",
+    "admin": "后台"
+  },
+  "auth": {
+    "login": "使用 GitHub 登录",
+    "logout": "退出登录"
+  },
+  "hero": {
+    "headline": "精致内容与玩味设计的结合。",
+    "subheadline": "浏览文章、实验作品与实时更新的简历，全部由安全的 Firebase 流程驱动。",
+    "cta": "查看最新文章",
+    "stack": "Firebase · Next.js · GitHub 授权"
+  },
+  "common": {
+    "loading": "加载中…",
+    "menu": "菜单",
+    "refresh": "刷新",
+    "toggleTheme": "切换主题",
+    "search": "搜索"
+  },
+  "search": {
+    "placeholder": "搜索文章...",
+    "noResults": "未找到相关文章",
+    "found": "找到",
+    "results": "个结果",
+    "hint": "输入关键词搜索文章",
+    "tips": "提示：支持搜索标题、内容、标签",
+    "close": "关闭"
+  },
+  "posts": {
+    "recent": "最新文章",
+    "empty": "尚无文章，快到管理面板发布第一篇吧！",
+    "readMore": "阅读全文 →",
+    "notFound": {
+      "title": "未找到文章",
+      "description": "当前语言暂无该内容，或文章已下线。"
     }
   },
-  "resume.title": "个人简历",
-  "resume.subtitle": "技能、经历与教育背景的精简概览。",
-  "resume.download": "下载 PDF",
-  "resume.experienceTitle": "工作经历",
-  "resume.educationTitle": "教育背景",
-  "resume.experience": {
-    "nebula": {
-      "company": "Nebula Collective",
-      "role": "首席产品设计师",
-      "period": "2022 — 至今",
-      "description": "带领跨职能团队打造沉浸式的编辑体验与数据叙事产品。"
-    },
-    "lumen": {
-      "company": "Studio Lumen",
-      "role": "高级 UX 工程师",
-      "period": "2018 — 2022",
-      "description": "负责高动效界面原型、设计系统落地，并连接设计与工程团队。"
+  "archives": {
+    "title": "文章归档",
+    "description": "按时间线浏览所有文章",
+    "total": "共",
+    "articles": "篇文章",
+    "empty": "暂无归档文章"
+  },
+  "categories": {
+    "title": "文章分类",
+    "description": "按分类浏览文章",
+    "total": "共",
+    "items": "个分类",
+    "articles": "篇文章",
+    "empty": "暂无分类",
+    "noArticles": "该分类下暂无文章"
+  },
+  "tags": {
+    "title": "标签云",
+    "description": "按标签浏览文章",
+    "total": "共",
+    "items": "个标签",
+    "articles": "篇文章",
+    "list": "标签列表",
+    "empty": "暂无标签",
+    "noArticles": "该标签下暂无文章"
+  },
+  "about": {
+    "title": "关于我",
+    "subtitle": "Hello, World!",
+    "introduction": "自我介绍",
+    "skills": "技能栈",
+    "contact": "联系方式",
+    "built": "本站使用"
+  },
+  "links": {
+    "title": "友情链接",
+    "description": "优质博客推荐",
+    "applyTitle": "申请友链",
+    "applyDescription": "欢迎交换友链，请满足以下条件：",
+    "empty": "暂无友链"
+  },
+  "firebaseSetup": {
+    "title": "Firebase 配置",
+    "description": "配置 Firebase 以启用博客功能"
+  },
+  "portfolio": {
+    "title": "精选案例",
+    "description": "展示已上线产品、视觉探索与开源尝试的精选合集。",
+    "viewMore": "查看完整案例",
+    "projects": {
+      "aurora": {
+        "title": "Aurora Interfaces",
+        "summary": "一套支持跨平台的设计系统，便于快速尝试生成式视觉效果。",
+        "role": "产品设计 · 创意统筹"
+      },
+      "atlas": {
+        "title": "Atlas Explorer",
+        "summary": "结合地图、长篇内容与多媒体的空间叙事体验。",
+        "role": "用户研究 · 前端开发"
+      },
+      "palette": {
+        "title": "Palette Sketch",
+        "summary": "面向设计师的趣味配色工具，并支持基于 Firebase 的共享看板。",
+        "role": "创意编程 · 产品策略"
+      }
     }
   },
-  "resume.education": {
-    "parsons": {
-      "school": "帕森斯设计学院",
-      "degree": "MFA 设计与科技",
-      "year": "2018"
+  "resume": {
+    "title": "个人简历",
+    "subtitle": "技能、经历与教育背景的精简概览。",
+    "download": "下载 PDF",
+    "experienceTitle": "工作经历",
+    "educationTitle": "教育背景",
+    "experience": {
+      "nebula": {
+        "company": "Nebula Collective",
+        "role": "首席产品设计师",
+        "period": "2022 — 至今",
+        "description": "带领跨职能团队打造沉浸式的编辑体验与数据叙事产品。"
+      },
+      "lumen": {
+        "company": "Studio Lumen",
+        "role": "高级 UX 工程师",
+        "period": "2018 — 2022",
+        "description": "负责高动效界面原型、设计系统落地，并连接设计与工程团队。"
+      }
     },
-    "tongji": {
-      "school": "同济大学",
-      "degree": "工业设计学士",
-      "year": "2015"
+    "education": {
+      "parsons": {
+        "school": "帕森斯设计学院",
+        "degree": "MFA 设计与科技",
+        "year": "2018"
+      },
+      "tongji": {
+        "school": "同济大学",
+        "degree": "工业设计学士",
+        "year": "2015"
+      }
     }
   },
-  "tools.title": "创意工具箱",
-  "tools.description": "辅助日常工作的迷你工具，从配色灵感到文案润色。",
-  "tools.paletteTitle": "配色生成器",
-  "tools.wordTitle": "文稿工作台",
-  "tools.wordSubtitle": "写作时实时掌握字数与节奏。",
-  "tools.wordPlaceholder": "在此输入或粘贴文本…",
-  "tools.wordsLabel": "词数 · {count}",
-  "tools.charactersLabel": "字符数 · {count}",
-  "tools.timestampTitle": "时间戳转换器",
-  "tools.timestampDescription": "将 Unix 时间戳转换为易读格式。",
-  "tools.timestampPlaceholder": "1693429342",
-  "admin.title": "个人发布工作台",
-  "admin.subtitle": "仅限认证的站点主人创建、更新与删除内容。",
-  "admin.create": "创建文章",
-  "admin.update": "更新文章",
-  "admin.delete": "删除",
-  "admin.reset": "重置表单",
-  "admin.form.title": "标题",
-  "admin.form.slug": "链接标识",
-  "admin.form.summary": "摘要",
-  "admin.form.content": "正文",
-  "admin.form.coverImage": "封面图片链接",
-  "admin.form.tags": "标签（用逗号分隔）",
-  "admin.form.locale": "语言",
-  "admin.save": "保存修改",
-  "admin.allowedOnly": "只有被授权的主人可以管理文章。",
-  "admin.activeLocales": "已启用语言：{locales}",
-  "admin.error.unknown": "发生未知错误，请重试。",
-  "footer.copyright": "© {year} Kuku Studio · 基于 Firebase 与 Next.js 打造",
-  "footer.navigation": "导航",
-  "footer.about": "关于",
-  "footer.resources": "资源",
-  "footer.siteDescription": "一个集合文字、作品与工具的创意空间",
-  "footer.running": "网站运行",
-  "footer.days": "天",
-  "footer.allRightsReserved": "版权所有",
-  "footer.builtWith": "使用",
-  "footer.firebaseSetup": "Firebase 配置",
-  "language.label": "语言"
+  "tools": {
+    "title": "创意工具箱",
+    "description": "辅助日常工作的迷你工具，从配色灵感到文案润色。",
+    "paletteTitle": "配色生成器",
+    "wordTitle": "文稿工作台",
+    "wordSubtitle": "写作时实时掌握字数与节奏。",
+    "wordPlaceholder": "在此输入或粘贴文本…",
+    "wordsLabel": "词数 · {count}",
+    "charactersLabel": "字符数 · {count}",
+    "timestampTitle": "时间戳转换器",
+    "timestampDescription": "将 Unix 时间戳转换为易读格式。",
+    "timestampPlaceholder": "1693429342"
+  },
+  "admin": {
+    "title": "个人发布工作台",
+    "subtitle": "仅限认证的站点主人创建、更新与删除内容。",
+    "create": "创建文章",
+    "update": "更新文章",
+    "delete": "删除",
+    "reset": "重置表单",
+    "form": {
+      "title": "标题",
+      "slug": "链接标识",
+      "summary": "摘要",
+      "content": "正文",
+      "coverImage": "封面图片链接",
+      "tags": "标签（用逗号分隔）",
+      "locale": "语言"
+    },
+    "save": "保存修改",
+    "allowedOnly": "只有被授权的主人可以管理文章。",
+    "activeLocales": "已启用语言：{locales}",
+    "error": {
+      "unknown": "发生未知错误，请重试。"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Kuku Studio · 基于 Firebase 与 Next.js 打造",
+    "navigation": "导航",
+    "about": "关于",
+    "resources": "资源",
+    "siteDescription": "一个集合文字、作品与工具的创意空间",
+    "running": "网站运行",
+    "days": "天",
+    "allRightsReserved": "版权所有",
+    "builtWith": "使用",
+    "firebaseSetup": "Firebase 配置"
+  },
+  "language": {
+    "label": "语言"
+  }
 }

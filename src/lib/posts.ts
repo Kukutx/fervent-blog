@@ -13,7 +13,7 @@ import {
   where,
 } from "firebase/firestore";
 
-import { firestore } from "./firebase";
+import { firestore, isFirebaseReady } from "./firebase";
 
 export type PostInput = {
   title: string;
@@ -31,7 +31,14 @@ export type Post = PostInput & {
   publishedAt: Timestamp;
 };
 
-const postsCollection = () => collection(firestore(), "posts");
+const postsCollection = () => {
+  if (!isFirebaseReady()) {
+    throw new Error(
+      "Firebase未配置。请访问 /firebase-setup 查看配置指南。",
+    );
+  }
+  return collection(firestore(), "posts");
+};
 
 export const subscribeToPosts = (
   locale: string,

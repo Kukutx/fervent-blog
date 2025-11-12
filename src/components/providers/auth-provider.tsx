@@ -9,11 +9,12 @@ import {
 } from "firebase/auth";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-import { firebaseAuth } from "@/lib/firebase";
+import { firebaseAuth, isFirebaseReady } from "@/lib/firebase";
 
 type AuthContextValue = {
   user: User | null;
   initializing: boolean;
+  isConfigured: boolean;
   loginWithGithub: () => Promise<void>;
   logout: () => Promise<void>;
 };
@@ -27,18 +28,37 @@ export const AuthProvider = ({
 }) => {
   const [user, setUser] = useState<User | null>(null);
   const [initializing, setInitializing] = useState(true);
+  const [isConfigured, setIsConfigured] = useState(false);
 
   useEffect(() => {
-    const auth = firebaseAuth();
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-      setUser(firebaseUser);
-      setInitializing(false);
-    });
+    const configured = isFirebaseReady();
+    setIsConfigured(configured);
 
-    return () => unsubscribe();
+    if (!configured) {
+      setInitializing(false);
+      return;
+    }
+
+    try {
+      const auth = firebaseAuth();
+      const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+        setUser(firebaseUser);
+        setInitializing(false);
+      });
+
+      return () => unsubscribe();
+    } catch (error) {
+      console.error("Firebase Auth初始化失败:", error);
+      setInitializing(false);
+    }
   }, []);
 
   const loginWithGithub = async () => {
+    if (!isFirebaseReady()) {
+      throw new Error(
+        "Firebase未配置。请访问 /firebase-setup 查看配置指南。",
+      );
+    }
     const auth = firebaseAuth();
     const provider = new GithubAuthProvider();
     provider.setCustomParameters({ allow_signup: "false" });
@@ -46,13 +66,16 @@ export const AuthProvider = ({
   };
 
   const logout = async () => {
+    if (!isFirebaseReady()) {
+      return;
+    }
     const auth = firebaseAuth();
     await signOut(auth);
   };
 
   const value = useMemo(
-    () => ({ user, initializing, loginWithGithub, logout }),
-    [user, initializing],
+    () => ({ user, initializing, isConfigured, loginWithGithub, logout }),
+    [user, initializing, isConfigured],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

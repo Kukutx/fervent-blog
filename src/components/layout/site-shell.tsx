@@ -27,7 +27,7 @@ export const SiteShell = ({ children }: { readonly children: ReactNode }) => {
       <div className="relative z-10 flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">
-          <div className="mx-auto max-w-6xl space-y-16 px-6 py-12 md:py-20">
+          <div className="mx-auto w-full max-w-6xl space-y-8 px-4 py-8 sm:space-y-12 sm:px-6 sm:py-12 md:space-y-16 md:py-20">
             {children}
           </div>
         </main>

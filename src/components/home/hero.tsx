@@ -52,7 +52,7 @@ export const Hero = () => {
   return (
     <section
       ref={bannerRef}
-      className="parallax relative flex h-screen min-h-[600px] w-full items-center justify-center overflow-hidden"
+      className="parallax relative flex h-screen min-h-[500px] w-full items-center justify-center overflow-hidden sm:min-h-[600px]"
       style={{
         backgroundImage: 'url("/images/hero-bg.jpg")',
         backgroundSize: "cover",
@@ -64,28 +64,28 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* 装饰光晕 */}
-      <div className="absolute right-20 top-20 hidden h-64 w-64 rounded-full bg-accent/20 blur-3xl md:block" />
-      <div className="absolute bottom-40 left-20 hidden h-48 w-48 rounded-full bg-purple-500/10 blur-3xl md:block" />
+      <div className="absolute right-10 top-10 hidden h-32 w-32 rounded-full bg-accent/20 blur-3xl sm:right-20 sm:top-20 sm:h-48 sm:w-48 md:h-64 md:w-64" />
+      <div className="absolute bottom-20 left-10 hidden h-24 w-24 rounded-full bg-purple-500/10 blur-3xl sm:bottom-40 sm:left-20 sm:h-36 sm:w-36 md:h-48 md:w-48" />
 
       {/* 内容区域 */}
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
-        <h1 className="text-balance text-5xl font-bold leading-tight tracking-tight text-white md:text-7xl">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 text-center sm:px-6">
+        <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
           {typedText}
           <span className="typing-cursor inline-block w-1 bg-accent">|</span>
         </h1>
-        <p className="mt-8 max-w-2xl text-pretty text-xl text-white/80 md:text-2xl">
+        <p className="mt-4 max-w-2xl text-pretty text-base text-white/80 sm:mt-6 sm:text-lg md:mt-8 md:text-xl lg:text-2xl">
           {t("hero.subheadline")}
         </p>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
           <Link
             href={getLocalizedHref("/", locale)}
-            className="group flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-gray-900 shadow-lg transition hover:scale-105 hover:shadow-xl"
+            className="group flex items-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-gray-900 shadow-lg transition hover:scale-105 hover:shadow-xl sm:gap-3 sm:px-8 sm:py-4 sm:text-sm"
           >
             {t("hero.cta")}
-            <ArrowRight className="transition group-hover:translate-x-1" size={18} />
+            <ArrowRight className="transition group-hover:translate-x-1" size={16} />
           </Link>
-          <div className="rounded-full border-2 border-white/30 px-8 py-4 text-xs uppercase tracking-[0.4em] text-white backdrop-blur-sm">
+          <div className="rounded-full border-2 border-white/30 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white backdrop-blur-sm sm:px-8 sm:py-4">
             {t("hero.stack")}
           </div>
         </div>

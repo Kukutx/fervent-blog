@@ -1,105 +1,206 @@
 {
-  "site.title": "Estudio Inspirado en Kuku",
-  "site.subtitle": "Un espacio creativo que combina blog, portafolio y utilidades.",
-  "navigation.blog": "Blog",
-  "navigation.portfolio": "Portafolio",
-  "navigation.resume": "Currículum",
-  "navigation.tools": "Herramientas",
-  "navigation.admin": "Panel",
-  "auth.login": "Iniciar sesión con GitHub",
-  "auth.logout": "Cerrar sesión",
-  "hero.headline": "Narrativas cuidadas con un diseño juguetón.",
-  "hero.subheadline": "Explora artículos, experimentos y un currículum vivo respaldado por Firebase.",
-  "hero.cta": "Ver publicaciones recientes",
-  "hero.stack": "Firebase · Next.js · Autenticación de GitHub",
-  "common.loading": "Cargando…",
-  "common.menu": "Menú",
-  "common.refresh": "Actualizar",
-  "common.toggleTheme": "Cambiar tema",
-  "posts.recent": "Historias recientes",
-  "posts.empty": "Aún no hay publicaciones. Usa el panel para crear la primera.",
-  "posts.readMore": "Leer más →",
-  "posts.notFound.title": "Artículo no encontrado",
-  "posts.notFound.description": "Esta historia no está disponible en el idioma actual o se ha despublicado.",
-  "portfolio.title": "Trabajos destacados",
-  "portfolio.description": "Galería curada de productos, dirección de arte y proyectos open-source.",
-  "portfolio.viewMore": "Ver casos completos",
-  "portfolio.projects": {
-    "aurora": {
-      "title": "Interfaces Aurora",
-      "summary": "Un sistema de diseño multiplataforma para experimentar rápidamente con visuales generativos.",
-      "role": "Diseño de producto · Dirección creativa"
-    },
-    "atlas": {
-      "title": "Atlas Explorer",
-      "summary": "Una experiencia narrativa espacial que combina mapas, texto largo y medios incrustados.",
-      "role": "Investigación UX · Desarrollo frontend"
-    },
-    "palette": {
-      "title": "Palette Sketch",
-      "summary": "Una herramienta lúdica de color para diseñadores, con tableros compartidos impulsados por Firebase.",
-      "role": "Programación creativa · Estrategia de producto"
+  "site": {
+    "title": "Estudio Inspirado en Kuku",
+    "subtitle": "Un espacio creativo que combina blog, portafolio y utilidades."
+  },
+  "navigation": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "archives": "Archivos",
+    "categories": "Categorías",
+    "allCategories": "Todas las categorías",
+    "tags": "Etiquetas",
+    "about": "Acerca de",
+    "links": "Enlaces",
+    "portfolio": "Portafolio",
+    "resume": "Currículum",
+    "tools": "Herramientas",
+    "admin": "Panel"
+  },
+  "auth": {
+    "login": "Iniciar sesión con GitHub",
+    "logout": "Cerrar sesión"
+  },
+  "hero": {
+    "headline": "Narrativas cuidadas con un diseño juguetón.",
+    "subheadline": "Explora artículos, experimentos y un currículum vivo respaldado por Firebase.",
+    "cta": "Ver publicaciones recientes",
+    "stack": "Firebase · Next.js · Autenticación de GitHub"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "menu": "Menú",
+    "refresh": "Actualizar",
+    "toggleTheme": "Cambiar tema",
+    "search": "Buscar"
+  },
+  "search": {
+    "placeholder": "Buscar artículos...",
+    "noResults": "No se encontraron artículos",
+    "found": "Encontrados",
+    "results": "resultados",
+    "hint": "Ingrese palabras clave para buscar artículos",
+    "tips": "Consejo: Buscar por título, contenido o etiquetas",
+    "close": "Cerrar"
+  },
+  "posts": {
+    "recent": "Historias recientes",
+    "empty": "Aún no hay publicaciones. Usa el panel para crear la primera.",
+    "readMore": "Leer más →",
+    "notFound": {
+      "title": "Artículo no encontrado",
+      "description": "Esta historia no está disponible en el idioma actual o se ha despublicado."
     }
   },
-  "resume.title": "Currículum",
-  "resume.subtitle": "Resumen conciso de habilidades, experiencia y educación.",
-  "resume.download": "Descargar PDF",
-  "resume.experienceTitle": "Experiencia",
-  "resume.educationTitle": "Educación",
-  "resume.experience": {
-    "nebula": {
-      "company": "Nebula Collective",
-      "role": "Lead Product Designer",
-      "period": "2022 — Presente",
-      "description": "Lidero equipos multifuncionales para crear experiencias editoriales inmersivas y productos de narrativas de datos."
-    },
-    "lumen": {
-      "company": "Studio Lumen",
-      "role": "Senior UX Engineer",
-      "period": "2018 — 2022",
-      "description": "Prototipé interfaces con movimiento, lancé sistemas de diseño y conecté a los equipos de diseño e ingeniería."
+  "archives": {
+    "title": "Archivos",
+    "description": "Explorar todos los artículos por línea de tiempo",
+    "total": "Total",
+    "articles": "artículos",
+    "empty": "No hay artículos archivados"
+  },
+  "categories": {
+    "title": "Categorías",
+    "description": "Explorar artículos por categoría",
+    "total": "Total",
+    "items": "categorías",
+    "articles": "artículos",
+    "empty": "No hay categorías",
+    "noArticles": "No hay artículos en esta categoría"
+  },
+  "tags": {
+    "title": "Etiquetas",
+    "description": "Explorar artículos por etiqueta",
+    "total": "Total",
+    "items": "etiquetas",
+    "articles": "artículos",
+    "list": "Lista de etiquetas",
+    "empty": "No hay etiquetas",
+    "noArticles": "No hay artículos con esta etiqueta"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "subtitle": "¡Hola, Mundo!",
+    "introduction": "Introducción",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "built": "Construido con"
+  },
+  "links": {
+    "title": "Enlaces de amigos",
+    "description": "Recomendaciones de blogs de calidad",
+    "applyTitle": "Solicitar enlace",
+    "applyDescription": "Bienvenido a intercambiar enlaces. Por favor, cumpla las siguientes condiciones:",
+    "empty": "Aún no hay enlaces de amigos"
+  },
+  "firebaseSetup": {
+    "title": "Configuración de Firebase",
+    "description": "Configurar Firebase para habilitar las funciones del blog"
+  },
+  "portfolio": {
+    "title": "Trabajos destacados",
+    "description": "Galería curada de productos, dirección de arte y proyectos open-source.",
+    "viewMore": "Ver casos completos",
+    "projects": {
+      "aurora": {
+        "title": "Interfaces Aurora",
+        "summary": "Un sistema de diseño multiplataforma para experimentar rápidamente con visuales generativos.",
+        "role": "Diseño de producto · Dirección creativa"
+      },
+      "atlas": {
+        "title": "Atlas Explorer",
+        "summary": "Una experiencia narrativa espacial que combina mapas, texto largo y medios incrustados.",
+        "role": "Investigación UX · Desarrollo frontend"
+      },
+      "palette": {
+        "title": "Palette Sketch",
+        "summary": "Una herramienta lúdica de color para diseñadores, con tableros compartidos impulsados por Firebase.",
+        "role": "Programación creativa · Estrategia de producto"
+      }
     }
   },
-  "resume.education": {
-    "parsons": {
-      "school": "Parsons School of Design",
-      "degree": "MFA Design + Technology",
-      "year": "2018"
+  "resume": {
+    "title": "Currículum",
+    "subtitle": "Resumen conciso de habilidades, experiencia y educación.",
+    "download": "Descargar PDF",
+    "experienceTitle": "Experiencia",
+    "educationTitle": "Educación",
+    "experience": {
+      "nebula": {
+        "company": "Nebula Collective",
+        "role": "Lead Product Designer",
+        "period": "2022 — Presente",
+        "description": "Lidero equipos multifuncionales para crear experiencias editoriales inmersivas y productos de narrativas de datos."
+      },
+      "lumen": {
+        "company": "Studio Lumen",
+        "role": "Senior UX Engineer",
+        "period": "2018 — 2022",
+        "description": "Prototipé interfaces con movimiento, lancé sistemas de diseño y conecté a los equipos de diseño e ingeniería."
+      }
     },
-    "tongji": {
-      "school": "Universidad de Tongji",
-      "degree": "BDes Diseño Industrial",
-      "year": "2015"
+    "education": {
+      "parsons": {
+        "school": "Parsons School of Design",
+        "degree": "MFA Design + Technology",
+        "year": "2018"
+      },
+      "tongji": {
+        "school": "Universidad de Tongji",
+        "degree": "BDes Diseño Industrial",
+        "year": "2015"
+      }
     }
   },
-  "tools.title": "Herramientas creativas",
-  "tools.description": "Mini utilidades que facilitan el flujo diario de trabajo.",
-  "tools.paletteTitle": "Creador de paletas",
-  "tools.wordTitle": "Estudio de palabras",
-  "tools.wordSubtitle": "Controla la extensión y el ritmo del texto mientras escribes.",
-  "tools.wordPlaceholder": "Escribe o pega texto aquí…",
-  "tools.wordsLabel": "Palabras · {count}",
-  "tools.charactersLabel": "Caracteres · {count}",
-  "tools.timestampTitle": "Convertidor de marcas de tiempo",
-  "tools.timestampDescription": "Convierte marcas de tiempo Unix a un formato legible.",
-  "tools.timestampPlaceholder": "1693429342",
-  "admin.title": "Estudio personal de publicación",
-  "admin.subtitle": "Solo el propietario autenticado puede gestionar el contenido.",
-  "admin.create": "Crear publicación",
-  "admin.update": "Actualizar publicación",
-  "admin.delete": "Eliminar",
-  "admin.reset": "Restablecer formulario",
-  "admin.form.title": "Título",
-  "admin.form.slug": "Slug",
-  "admin.form.summary": "Resumen",
-  "admin.form.content": "Contenido",
-  "admin.form.coverImage": "URL de portada",
-  "admin.form.tags": "Etiquetas (separadas por comas)",
-  "admin.form.locale": "Idioma",
-  "admin.save": "Guardar cambios",
-  "admin.allowedOnly": "Solo el propietario autorizado puede administrar publicaciones.",
-  "admin.activeLocales": "Idiomas activos: {locales}",
-  "admin.error.unknown": "Error inesperado. Inténtalo de nuevo.",
-  "footer.copyright": "© {year} Kuku Studio · Creado con Firebase y Next.js",
-  "language.label": "Idioma"
+  "tools": {
+    "title": "Herramientas creativas",
+    "description": "Mini utilidades que facilitan el flujo diario de trabajo.",
+    "paletteTitle": "Creador de paletas",
+    "wordTitle": "Estudio de palabras",
+    "wordSubtitle": "Controla la extensión y el ritmo del texto mientras escribes.",
+    "wordPlaceholder": "Escribe o pega texto aquí…",
+    "wordsLabel": "Palabras · {count}",
+    "charactersLabel": "Caracteres · {count}",
+    "timestampTitle": "Convertidor de marcas de tiempo",
+    "timestampDescription": "Convierte marcas de tiempo Unix a un formato legible.",
+    "timestampPlaceholder": "1693429342"
+  },
+  "admin": {
+    "title": "Estudio personal de publicación",
+    "subtitle": "Solo el propietario autenticado puede gestionar el contenido.",
+    "create": "Crear publicación",
+    "update": "Actualizar publicación",
+    "delete": "Eliminar",
+    "reset": "Restablecer formulario",
+    "form": {
+      "title": "Título",
+      "slug": "Slug",
+      "summary": "Resumen",
+      "content": "Contenido",
+      "coverImage": "URL de portada",
+      "tags": "Etiquetas (separadas por comas)",
+      "locale": "Idioma"
+    },
+    "save": "Guardar cambios",
+    "allowedOnly": "Solo el propietario autorizado puede administrar publicaciones.",
+    "activeLocales": "Idiomas activos: {locales}",
+    "error": {
+      "unknown": "Error inesperado. Inténtalo de nuevo."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Kuku Studio · Creado con Firebase y Next.js",
+    "navigation": "Navegación",
+    "about": "Acerca de",
+    "resources": "Recursos",
+    "siteDescription": "Un espacio creativo que combina blog, portafolio y utilidades",
+    "running": "Funcionando durante",
+    "days": "días",
+    "allRightsReserved": "Todos los derechos reservados",
+    "builtWith": "Construido con",
+    "firebaseSetup": "Configuración de Firebase"
+  },
+  "language": {
+    "label": "Idioma"
+  }
 }

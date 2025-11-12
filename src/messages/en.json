@@ -1,162 +1,206 @@
 {
-  "site.title": "Kuku Inspired Studio",
-  "site.subtitle": "A creative playground for words, work and tools.",
-  "navigation.home": "Home",
-  "navigation.blog": "Blog",
-  "navigation.archives": "Archives",
-  "navigation.categories": "Categories",
-  "navigation.allCategories": "All Categories",
-  "navigation.tags": "Tags",
-  "navigation.about": "About",
-  "navigation.links": "Links",
-  "navigation.portfolio": "Portfolio",
-  "navigation.resume": "Resume",
-  "navigation.tools": "Tools",
-  "navigation.admin": "Admin",
-  "auth.login": "Sign in with GitHub",
-  "auth.logout": "Sign out",
-  "hero.headline": "Crafted storytelling meets playful design.",
-  "hero.subheadline": "Explore essays, experiments and a living resume all powered by a secure Firebase workflow.",
-  "hero.cta": "Browse the latest posts",
-  "hero.stack": "Firebase · Next.js · GitHub Auth",
-  "common.loading": "Loading…",
-  "common.menu": "Menu",
-  "common.refresh": "Refresh",
-  "common.toggleTheme": "Toggle theme",
-  "common.search": "Search",
-  "search.placeholder": "Search articles...",
-  "search.noResults": "No articles found",
-  "search.found": "Found",
-  "search.results": "results",
-  "search.hint": "Enter keywords to search articles",
-  "search.tips": "Tip: Search by title, content, or tags",
-  "search.close": "Close",
-  "posts.recent": "Latest Stories",
-  "posts.empty": "No posts yet. Use the admin panel to publish your first article!",
-  "posts.readMore": "Read more →",
-  "posts.notFound.title": "Article not found",
-  "posts.notFound.description": "This story is unavailable in the current language or has been unpublished.",
-  "archives.title": "Archives",
-  "archives.description": "Browse all articles by timeline",
-  "archives.total": "Total",
-  "archives.articles": "articles",
-  "archives.empty": "No archived articles",
-  "categories.title": "Categories",
-  "categories.description": "Browse articles by category",
-  "categories.total": "Total",
-  "categories.items": "categories",
-  "categories.articles": "articles",
-  "categories.empty": "No categories",
-  "categories.noArticles": "No articles in this category",
-  "tags.title": "Tags",
-  "tags.description": "Browse articles by tag",
-  "tags.total": "Total",
-  "tags.items": "tags",
-  "tags.articles": "articles",
-  "tags.list": "Tags List",
-  "tags.empty": "No tags",
-  "tags.noArticles": "No articles with this tag",
-  "about.title": "About Me",
-  "about.subtitle": "Hello, World!",
-  "about.introduction": "Introduction",
-  "about.skills": "Skills",
-  "about.contact": "Contact",
-  "about.built": "Built with",
-  "links.title": "Friend Links",
-  "links.description": "Quality blog recommendations",
-  "links.applyTitle": "Apply for Link",
-  "links.applyDescription": "Welcome to exchange links. Please meet the following conditions:",
-  "links.empty": "No friend links yet",
-  "firebaseSetup.title": "Firebase Setup",
-  "firebaseSetup.description": "Configure Firebase to enable blog features",
-  "portfolio.title": "Selected Works",
-  "portfolio.description": "A curated gallery of shipped products, art direction studies and open-source experiments.",
-  "portfolio.viewMore": "Discover full case studies",
-  "portfolio.projects": {
-    "aurora": {
-      "title": "Aurora Interfaces",
-      "summary": "A multi-platform design system for rapid experimentation with generative visuals.",
-      "role": "Product design · Creative direction"
-    },
-    "atlas": {
-      "title": "Atlas Explorer",
-      "summary": "A spatial storytelling experience combining maps, long-form writing and embedded media.",
-      "role": "UX research · Frontend development"
-    },
-    "palette": {
-      "title": "Palette Sketch",
-      "summary": "A playful color utility for designers, including Firebase powered sharing boards.",
-      "role": "Creative coding · Product strategy"
+  "site": {
+    "title": "Kuku Inspired Studio",
+    "subtitle": "A creative playground for words, work and tools."
+  },
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "archives": "Archives",
+    "categories": "Categories",
+    "allCategories": "All Categories",
+    "tags": "Tags",
+    "about": "About",
+    "links": "Links",
+    "portfolio": "Portfolio",
+    "resume": "Resume",
+    "tools": "Tools",
+    "admin": "Admin"
+  },
+  "auth": {
+    "login": "Sign in with GitHub",
+    "logout": "Sign out"
+  },
+  "hero": {
+    "headline": "Crafted storytelling meets playful design.",
+    "subheadline": "Explore essays, experiments and a living resume all powered by a secure Firebase workflow.",
+    "cta": "Browse the latest posts",
+    "stack": "Firebase · Next.js · GitHub Auth"
+  },
+  "common": {
+    "loading": "Loading…",
+    "menu": "Menu",
+    "refresh": "Refresh",
+    "toggleTheme": "Toggle theme",
+    "search": "Search"
+  },
+  "search": {
+    "placeholder": "Search articles...",
+    "noResults": "No articles found",
+    "found": "Found",
+    "results": "results",
+    "hint": "Enter keywords to search articles",
+    "tips": "Tip: Search by title, content, or tags",
+    "close": "Close"
+  },
+  "posts": {
+    "recent": "Latest Stories",
+    "empty": "No posts yet. Use the admin panel to publish your first article!",
+    "readMore": "Read more →",
+    "notFound": {
+      "title": "Article not found",
+      "description": "This story is unavailable in the current language or has been unpublished."
     }
   },
-  "resume.title": "Resume",
-  "resume.subtitle": "A concise snapshot of skills, experience and education.",
-  "resume.download": "Download PDF",
-  "resume.experienceTitle": "Experience",
-  "resume.educationTitle": "Education",
-  "resume.experience": {
-    "nebula": {
-      "company": "Nebula Collective",
-      "role": "Lead Product Designer",
-      "period": "2022 — Present",
-      "description": "Leading cross-functional pods to craft immersive editorial experiences and data storytelling products."
-    },
-    "lumen": {
-      "company": "Studio Lumen",
-      "role": "Senior UX Engineer",
-      "period": "2018 — 2022",
-      "description": "Prototyped motion-rich interfaces, shipped design systems and bridged design with engineering teams."
+  "archives": {
+    "title": "Archives",
+    "description": "Browse all articles by timeline",
+    "total": "Total",
+    "articles": "articles",
+    "empty": "No archived articles"
+  },
+  "categories": {
+    "title": "Categories",
+    "description": "Browse articles by category",
+    "total": "Total",
+    "items": "categories",
+    "articles": "articles",
+    "empty": "No categories",
+    "noArticles": "No articles in this category"
+  },
+  "tags": {
+    "title": "Tags",
+    "description": "Browse articles by tag",
+    "total": "Total",
+    "items": "tags",
+    "articles": "articles",
+    "list": "Tags List",
+    "empty": "No tags",
+    "noArticles": "No articles with this tag"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Hello, World!",
+    "introduction": "Introduction",
+    "skills": "Skills",
+    "contact": "Contact",
+    "built": "Built with"
+  },
+  "links": {
+    "title": "Friend Links",
+    "description": "Quality blog recommendations",
+    "applyTitle": "Apply for Link",
+    "applyDescription": "Welcome to exchange links. Please meet the following conditions:",
+    "empty": "No friend links yet"
+  },
+  "firebaseSetup": {
+    "title": "Firebase Setup",
+    "description": "Configure Firebase to enable blog features"
+  },
+  "portfolio": {
+    "title": "Selected Works",
+    "description": "A curated gallery of shipped products, art direction studies and open-source experiments.",
+    "viewMore": "Discover full case studies",
+    "projects": {
+      "aurora": {
+        "title": "Aurora Interfaces",
+        "summary": "A multi-platform design system for rapid experimentation with generative visuals.",
+        "role": "Product design · Creative direction"
+      },
+      "atlas": {
+        "title": "Atlas Explorer",
+        "summary": "A spatial storytelling experience combining maps, long-form writing and embedded media.",
+        "role": "UX research · Frontend development"
+      },
+      "palette": {
+        "title": "Palette Sketch",
+        "summary": "A playful color utility for designers, including Firebase powered sharing boards.",
+        "role": "Creative coding · Product strategy"
+      }
     }
   },
-  "resume.education": {
-    "parsons": {
-      "school": "Parsons School of Design",
-      "degree": "MFA Design + Technology",
-      "year": "2018"
+  "resume": {
+    "title": "Resume",
+    "subtitle": "A concise snapshot of skills, experience and education.",
+    "download": "Download PDF",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "experience": {
+      "nebula": {
+        "company": "Nebula Collective",
+        "role": "Lead Product Designer",
+        "period": "2022 — Present",
+        "description": "Leading cross-functional pods to craft immersive editorial experiences and data storytelling products."
+      },
+      "lumen": {
+        "company": "Studio Lumen",
+        "role": "Senior UX Engineer",
+        "period": "2018 — 2022",
+        "description": "Prototyped motion-rich interfaces, shipped design systems and bridged design with engineering teams."
+      }
     },
-    "tongji": {
-      "school": "Tongji University",
-      "degree": "BDes Industrial Design",
-      "year": "2015"
+    "education": {
+      "parsons": {
+        "school": "Parsons School of Design",
+        "degree": "MFA Design + Technology",
+        "year": "2018"
+      },
+      "tongji": {
+        "school": "Tongji University",
+        "degree": "BDes Industrial Design",
+        "year": "2015"
+      }
     }
   },
-  "tools.title": "Creative Tools",
-  "tools.description": "Mini utilities that support daily workflows, from color inspiration to copy refinement.",
-  "tools.paletteTitle": "Palette Crafter",
-  "tools.wordTitle": "Word Studio",
-  "tools.wordSubtitle": "Keep track of copy length and cadence as you write.",
-  "tools.wordPlaceholder": "Write or paste text here…",
-  "tools.wordsLabel": "Words · {count}",
-  "tools.charactersLabel": "Characters · {count}",
-  "tools.timestampTitle": "Timestamp Converter",
-  "tools.timestampDescription": "Convert Unix timestamps to human readable format.",
-  "tools.timestampPlaceholder": "1693429342",
-  "admin.title": "Personal Publishing Studio",
-  "admin.subtitle": "Only the authenticated owner can create, update or delete entries.",
-  "admin.create": "Create post",
-  "admin.update": "Update post",
-  "admin.delete": "Delete",
-  "admin.reset": "Reset form",
-  "admin.form.title": "Title",
-  "admin.form.slug": "Slug",
-  "admin.form.summary": "Summary",
-  "admin.form.content": "Content",
-  "admin.form.coverImage": "Cover image URL",
-  "admin.form.tags": "Tags (comma separated)",
-  "admin.form.locale": "Locale",
-  "admin.save": "Save changes",
-  "admin.allowedOnly": "You must be the approved owner to manage posts.",
-  "admin.activeLocales": "Active locales: {locales}",
-  "admin.error.unknown": "Unexpected error. Please try again.",
-  "footer.copyright": "© {year} Kuku Studio · Crafted with Firebase & Next.js",
-  "footer.navigation": "Navigation",
-  "footer.about": "About",
-  "footer.resources": "Resources",
-  "footer.siteDescription": "A creative playground for words, work and tools",
-  "footer.running": "Running for",
-  "footer.days": "days",
-  "footer.allRightsReserved": "All rights reserved",
-  "footer.builtWith": "Built with",
-  "footer.firebaseSetup": "Firebase Setup",
-  "language.label": "Language"
+  "tools": {
+    "title": "Creative Tools",
+    "description": "Mini utilities that support daily workflows, from color inspiration to copy refinement.",
+    "paletteTitle": "Palette Crafter",
+    "wordTitle": "Word Studio",
+    "wordSubtitle": "Keep track of copy length and cadence as you write.",
+    "wordPlaceholder": "Write or paste text here…",
+    "wordsLabel": "Words · {count}",
+    "charactersLabel": "Characters · {count}",
+    "timestampTitle": "Timestamp Converter",
+    "timestampDescription": "Convert Unix timestamps to human readable format.",
+    "timestampPlaceholder": "1693429342"
+  },
+  "admin": {
+    "title": "Personal Publishing Studio",
+    "subtitle": "Only the authenticated owner can create, update or delete entries.",
+    "create": "Create post",
+    "update": "Update post",
+    "delete": "Delete",
+    "reset": "Reset form",
+    "form": {
+      "title": "Title",
+      "slug": "Slug",
+      "summary": "Summary",
+      "content": "Content",
+      "coverImage": "Cover image URL",
+      "tags": "Tags (comma separated)",
+      "locale": "Locale"
+    },
+    "save": "Save changes",
+    "allowedOnly": "You must be the approved owner to manage posts.",
+    "activeLocales": "Active locales: {locales}",
+    "error": {
+      "unknown": "Unexpected error. Please try again."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Kuku Studio · Crafted with Firebase & Next.js",
+    "navigation": "Navigation",
+    "about": "About",
+    "resources": "Resources",
+    "siteDescription": "A creative playground for words, work and tools",
+    "running": "Running for",
+    "days": "days",
+    "allRightsReserved": "All rights reserved",
+    "builtWith": "Built with",
+    "firebaseSetup": "Firebase Setup"
+  },
+  "language": {
+    "label": "Language"
+  }
 }

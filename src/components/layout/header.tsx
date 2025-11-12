@@ -26,7 +26,7 @@ export const Header = () => {
   const t = useTranslations();
   const locale = useLocale();
   const isActive = useIsActive();
-  const { user, loginWithGithub, logout } = useAuth();
+  const { user, loginWithGithub, logout, isConfigured } = useAuth();
   const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +61,6 @@ export const Header = () => {
       { href: "/about", label: t("navigation.about"), icon: "👤" },
       { href: "/links", label: t("navigation.links"), icon: "🔗" },
       { href: "/portfolio", label: t("navigation.portfolio"), icon: "💼" },
-      { href: "/resume", label: t("navigation.resume"), icon: "📄" },
       { href: "/tools", label: t("navigation.tools"), icon: "🛠️" },
     ],
     [t],
@@ -133,34 +132,34 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-background/80 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
         <Link
           href={getLocalizedHref("/", locale)}
-          className="flex items-center gap-2 text-lg font-bold uppercase tracking-[0.4em] text-accent"
+          className="flex items-center gap-1 text-base font-bold uppercase tracking-[0.4em] text-accent sm:gap-2 sm:text-lg"
         >
-          <span className="text-2xl">K</span>
-          <span>{process.env.NEXT_PUBLIC_SITE_NAME || "Blog"}</span>
+          <span className="text-xl sm:text-2xl">K</span>
+          <span className="hidden sm:inline">{process.env.NEXT_PUBLIC_SITE_NAME || "Blog"}</span>
         </Link>
 
         {/* 桌面端导航 */}
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex xl:gap-4">
           {renderLinks()}
         </div>
 
         {/* 右侧工具栏 */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* 搜索按钮 */}
           <button
             type="button"
             aria-label={t("common.search")}
-            className="rounded-full border border-white/20 p-2 text-sm text-muted transition hover:border-accent hover:text-accent"
+            className="rounded-full border border-white/20 p-1.5 text-sm text-muted transition hover:border-accent hover:text-accent sm:p-2"
             onClick={() => setSearchOpen(true)}
           >
             <Search size={16} />
           </button>
 
           {/* 语言切换 */}
-          <div className="hidden md:block">
+          <div className="hidden sm:block">
             <LocaleSwitcher />
           </div>
 
@@ -168,39 +167,49 @@ export const Header = () => {
           <button
             type="button"
             aria-label={t("common.toggleTheme")}
-            className="hidden rounded-full border border-white/20 p-2 text-sm text-muted transition hover:border-accent hover:text-accent md:block"
+            className="hidden rounded-full border border-white/20 p-1.5 text-sm text-muted transition hover:border-accent hover:text-accent sm:block sm:p-2"
             onClick={handleToggleTheme}
           >
             {mounted && isDark ? <Sun size={16} /> : <MoonStar size={16} />}
           </button>
 
-          {/* 用户登录 */}
-          <button
-            type="button"
-            onClick={user ? logout : loginWithGithub}
-            className="hidden items-center gap-2 rounded-full border border-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent transition hover:bg-accent hover:text-background md:flex"
-          >
-            <UserRound size={16} />
-            {user ? t("auth.logout") : t("auth.login")}
-          </button>
+          {/* 用户登录 - 桌面端 */}
+          {isConfigured ? (
+            <button
+              type="button"
+              onClick={user ? logout : loginWithGithub}
+              className="hidden items-center gap-2 rounded-full border border-accent px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-accent transition hover:bg-accent hover:text-background sm:flex sm:px-4 sm:py-2"
+            >
+              <UserRound size={14} className="sm:w-4 sm:h-4" />
+              <span className="hidden md:inline">{user ? t("auth.logout") : t("auth.login")}</span>
+            </button>
+          ) : (
+            <Link
+              href={getLocalizedHref("/firebase-setup", locale)}
+              className="hidden items-center gap-1 rounded-full border border-yellow-500/50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-yellow-500 transition hover:bg-yellow-500/10 sm:flex sm:gap-2 sm:px-4 sm:py-2"
+            >
+              <span>⚙️</span>
+              <span className="hidden md:inline">{t("footer.firebaseSetup")}</span>
+            </Link>
+          )}
 
           {/* 移动端菜单按钮 */}
           <button
             type="button"
-            className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-semibold uppercase text-muted transition hover:border-accent hover:text-accent lg:hidden"
+            className="flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-1.5 text-xs font-semibold uppercase text-muted transition hover:border-accent hover:text-accent xl:hidden"
             onClick={() => setMenuOpen((current) => !current)}
           >
-            <Menu size={18} />
-            {t("common.menu")}
+            <Menu size={16} />
+            <span className="hidden sm:inline">{t("common.menu")}</span>
           </button>
         </div>
       </div>
 
       {/* 移动端菜单 */}
       {menuOpen && (
-        <div className="border-t border-white/10 bg-background/95 px-6 py-6 backdrop-blur lg:hidden">
+        <div className="border-t border-white/10 bg-background/95 px-4 py-4 backdrop-blur sm:px-6 sm:py-6 xl:hidden">
           {renderLinks(true)}
-          <div className="mt-6 flex flex-col gap-4">
+          <div className="mt-4 flex flex-col gap-3 sm:mt-6 sm:gap-4">
             <div className="flex items-center justify-between">
               <LocaleSwitcher />
               <button
@@ -212,14 +221,24 @@ export const Header = () => {
                 {mounted && isDark ? <Sun size={16} /> : <MoonStar size={16} />}
               </button>
             </div>
-            <button
-              type="button"
-              onClick={user ? logout : loginWithGithub}
-              className="flex items-center justify-center gap-2 rounded-full border border-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent transition hover:bg-accent hover:text-background"
-            >
-              <UserRound size={16} />
-              {user ? t("auth.logout") : t("auth.login")}
-            </button>
+            {isConfigured ? (
+              <button
+                type="button"
+                onClick={user ? logout : loginWithGithub}
+                className="flex items-center justify-center gap-2 rounded-full border border-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent transition hover:bg-accent hover:text-background"
+              >
+                <UserRound size={16} />
+                {user ? t("auth.logout") : t("auth.login")}
+              </button>
+            ) : (
+              <Link
+                href={getLocalizedHref("/firebase-setup", locale)}
+                className="flex items-center justify-center gap-2 rounded-full border border-yellow-500/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-yellow-500 transition hover:bg-yellow-500/10"
+              >
+                <span>⚙️</span>
+                {t("footer.firebaseSetup")}
+              </Link>
+            )}
           </div>
         </div>
       )}
