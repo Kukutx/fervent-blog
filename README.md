@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Fervent Blog · Kuku Inspired Studio
 
-## Getting Started
+This project is a heavily customised Next.js blog system inspired by [KukuBlog](https://kukutx.github.io/kukuBlog.github.io/). It combines a Firebase powered content workflow with a multilingual presentation layer including:
 
-First, run the development server:
+- GitHub authentication (via Firebase Auth) restricted to a single owner.
+- A private admin studio to create, update and delete Firestore backed blog posts.
+- Dedicated portfolio, resume and creative tools pages.
+- Live post pages with automatic real-time updates.
+- Internationalisation with English, Simplified Chinese, Spanish and French translations.
+
+## Prerequisites
+
+- Node.js 18+
+- A Firebase project configured with Authentication (GitHub provider) and Cloud Firestore.
+
+## Environment variables
+
+Create a `.env.local` file with the following public variables (values shown are placeholders):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_FIREBASE_API_KEY="..."
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="..."
+NEXT_PUBLIC_FIREBASE_PROJECT_ID="..."
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="..."
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="..."
+NEXT_PUBLIC_FIREBASE_APP_ID="..."
+# optional comma separated list of emails allowed to access the admin studio
+NEXT_PUBLIC_OWNER_EMAILS="me@example.com"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies and start the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Visit [http://localhost:3000](http://localhost:3000) and you will be automatically redirected to the default locale (`/en`).
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/[locale]` – App Router locale segments and pages.
+- `src/components` – UI building blocks (layout shell, admin studio, tools, etc.).
+- `src/lib/firebase.ts` – Firebase client initialisation.
+- `src/lib/posts.ts` – Firestore helpers for post CRUD.
+- `src/messages` – Translation dictionaries.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy the app on any Next.js compatible platform (Vercel, Firebase Hosting, etc.). Ensure the environment variables above are configured in your hosting provider so Firebase can initialise in production.
