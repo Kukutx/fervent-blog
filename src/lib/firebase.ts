@@ -26,7 +26,6 @@ const getFirebaseConfig = (): FirebaseConfig => {
 
   Object.entries(config).forEach(([key, value]) => {
     if (!value) {
-      // eslint-disable-next-line no-console
       console.warn(
         `Missing Firebase configuration value for ${key}. Check your environment variables.`,
       );

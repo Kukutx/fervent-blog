@@ -26,7 +26,7 @@ export const Hero = () => {
           {t("hero.cta")} <ArrowRight className="transition group-hover:translate-x-1" size={16} />
         </Link>
         <div className="rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white/70">
-          Firebase · Next.js · Github Auth
+          {t("hero.stack")}
         </div>
       </div>
     </section>

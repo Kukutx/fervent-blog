@@ -11,16 +11,78 @@
   "hero.headline": "Crafted storytelling meets playful design.",
   "hero.subheadline": "Explore essays, experiments and a living resume all powered by a secure Firebase workflow.",
   "hero.cta": "Browse the latest posts",
+  "hero.stack": "Firebase · Next.js · GitHub Auth",
+  "common.loading": "Loading…",
+  "common.menu": "Menu",
+  "common.refresh": "Refresh",
+  "common.toggleTheme": "Toggle theme",
   "posts.recent": "Latest Stories",
   "posts.empty": "No posts yet. Use the admin panel to publish your first article!",
+  "posts.readMore": "Read more →",
+  "posts.notFound.title": "Article not found",
+  "posts.notFound.description": "This story is unavailable in the current language or has been unpublished.",
   "portfolio.title": "Selected Works",
   "portfolio.description": "A curated gallery of shipped products, art direction studies and open-source experiments.",
   "portfolio.viewMore": "Discover full case studies",
+  "portfolio.projects": {
+    "aurora": {
+      "title": "Aurora Interfaces",
+      "summary": "A multi-platform design system for rapid experimentation with generative visuals.",
+      "role": "Product design · Creative direction"
+    },
+    "atlas": {
+      "title": "Atlas Explorer",
+      "summary": "A spatial storytelling experience combining maps, long-form writing and embedded media.",
+      "role": "UX research · Frontend development"
+    },
+    "palette": {
+      "title": "Palette Sketch",
+      "summary": "A playful color utility for designers, including Firebase powered sharing boards.",
+      "role": "Creative coding · Product strategy"
+    }
+  },
   "resume.title": "Resume",
   "resume.subtitle": "A concise snapshot of skills, experience and education.",
   "resume.download": "Download PDF",
+  "resume.experienceTitle": "Experience",
+  "resume.educationTitle": "Education",
+  "resume.experience": {
+    "nebula": {
+      "company": "Nebula Collective",
+      "role": "Lead Product Designer",
+      "period": "2022 — Present",
+      "description": "Leading cross-functional pods to craft immersive editorial experiences and data storytelling products."
+    },
+    "lumen": {
+      "company": "Studio Lumen",
+      "role": "Senior UX Engineer",
+      "period": "2018 — 2022",
+      "description": "Prototyped motion-rich interfaces, shipped design systems and bridged design with engineering teams."
+    }
+  },
+  "resume.education": {
+    "parsons": {
+      "school": "Parsons School of Design",
+      "degree": "MFA Design + Technology",
+      "year": "2018"
+    },
+    "tongji": {
+      "school": "Tongji University",
+      "degree": "BDes Industrial Design",
+      "year": "2015"
+    }
+  },
   "tools.title": "Creative Tools",
   "tools.description": "Mini utilities that support daily workflows, from color inspiration to copy refinement.",
+  "tools.paletteTitle": "Palette Crafter",
+  "tools.wordTitle": "Word Studio",
+  "tools.wordSubtitle": "Keep track of copy length and cadence as you write.",
+  "tools.wordPlaceholder": "Write or paste text here…",
+  "tools.wordsLabel": "Words · {count}",
+  "tools.charactersLabel": "Characters · {count}",
+  "tools.timestampTitle": "Timestamp Converter",
+  "tools.timestampDescription": "Convert Unix timestamps to human readable format.",
+  "tools.timestampPlaceholder": "1693429342",
   "admin.title": "Personal Publishing Studio",
   "admin.subtitle": "Only the authenticated owner can create, update or delete entries.",
   "admin.create": "Create post",
@@ -36,5 +98,8 @@
   "admin.form.locale": "Locale",
   "admin.save": "Save changes",
   "admin.allowedOnly": "You must be the approved owner to manage posts.",
+  "admin.activeLocales": "Active locales: {locales}",
+  "admin.error.unknown": "Unexpected error. Please try again.",
+  "footer.copyright": "© {year} Kuku Studio · Crafted with Firebase & Next.js",
   "language.label": "Language"
 }

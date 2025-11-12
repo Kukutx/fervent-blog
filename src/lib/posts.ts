@@ -38,22 +38,22 @@ export const subscribeToPosts = (
 ) => {
   const postsQuery = query(
     postsCollection(),
+    where("locale", "==", locale),
     orderBy("publishedAt", "desc"),
   );
 
   return onSnapshot(postsQuery, (snapshot) => {
-    const posts = snapshot.docs
-      .map((docSnapshot) => ({
-        id: docSnapshot.id,
-        ...(docSnapshot.data() as PostInput & { publishedAt?: Timestamp }),
-      }))
-      .filter((post) => post.locale === locale)
-      .map((post) => ({
+    const posts = snapshot.docs.map((docSnapshot) => ({
+      id: docSnapshot.id,
+      ...(docSnapshot.data() as PostInput & { publishedAt?: Timestamp }),
+    }));
+
+    callback(
+      posts.map((post) => ({
         ...post,
         publishedAt: post.publishedAt ?? Timestamp.now(),
-      }));
-
-    callback(posts);
+      })),
+    );
   });
 };
 
@@ -81,9 +81,15 @@ export const deletePost = async (id: string) => {
   await deleteDoc(document);
 };
 
-export const getPostBySlug = async (slug: string) => {
+export const getPostBySlug = async (slug: string, locale?: string) => {
+  const constraints = [where("slug", "==", slug)];
+
+  if (locale) {
+    constraints.push(where("locale", "==", locale));
+  }
+
   const snapshot = await getDocs(
-    query(postsCollection(), where("slug", "==", slug), limit(1)),
+    query(postsCollection(), ...constraints, limit(1)),
   );
 
   if (snapshot.empty) {
@@ -101,11 +107,17 @@ export const getPostBySlug = async (slug: string) => {
 };
 
 export const subscribeToPost = (
+  locale: string,
   slug: string,
   callback: (post: Post | null) => void,
 ) =>
   onSnapshot(
-    query(postsCollection(), where("slug", "==", slug), limit(1)),
+    query(
+      postsCollection(),
+      where("locale", "==", locale),
+      where("slug", "==", slug),
+      limit(1),
+    ),
     (snapshot) => {
       if (snapshot.empty) {
         callback(null);

@@ -22,6 +22,10 @@ export const AdminDashboard = () => {
   const { user, initializing, loginWithGithub } = useAuth();
   const [posts, setPosts] = useState<Post[]>([]);
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
+  const localeLabel = useMemo(
+    () => locales.map((item) => item.toUpperCase()).join(" · "),
+    [],
+  );
 
   const isAllowed = useMemo(() => {
     if (!ownerEmails.length) {
@@ -29,7 +33,7 @@ export const AdminDashboard = () => {
     }
 
     return ownerEmails.includes(user?.email ?? "");
-  }, [user, ownerEmails]);
+  }, [user]);
 
   useEffect(() => {
     if (!user || !isAllowed) {
@@ -56,7 +60,7 @@ export const AdminDashboard = () => {
   if (initializing) {
     return (
       <section className="rounded-3xl border border-white/10 bg-background/60 p-10 text-center text-sm text-muted">
-        Loading…
+        {t("common.loading")}
       </section>
     );
   }
@@ -113,9 +117,7 @@ export const AdminDashboard = () => {
         />
       </div>
       <div className="rounded-3xl border border-white/10 bg-background/60 p-6 text-xs text-muted">
-        <p>
-          Active locales: {locales.map((item) => item.toUpperCase()).join(" · ")}
-        </p>
+        <p>{t("admin.activeLocales", { locales: localeLabel })}</p>
       </div>
     </section>
   );

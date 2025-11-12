@@ -8,7 +8,7 @@ import { AuthProvider } from "./auth-provider";
 type AppProvidersProps = {
   readonly children: ReactNode;
   readonly locale: string;
-  readonly messages: Record<string, string>;
+  readonly messages: Record<string, unknown>;
 };
 
 export const AppProviders = ({

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 
 import { Locale, locales } from "./config";
 
-const messagesImports: Record<Locale, () => Promise<Record<string, string>>> = {
+const messagesImports: Record<Locale, () => Promise<Record<string, unknown>>> = {
   en: () => import("@/messages/en.json").then((mod) => mod.default),
   zh: () => import("@/messages/zh.json").then((mod) => mod.default),
   es: () => import("@/messages/es.json").then((mod) => mod.default),

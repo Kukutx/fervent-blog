@@ -10,7 +10,7 @@ export const Footer = () => {
           {t("site.subtitle")}
         </p>
         <p className="text-xs uppercase tracking-[0.4em] text-white/70">
-          © {new Date().getFullYear()} Kuku Studio · Crafted with Firebase & Next.js
+          {t("footer.copyright", { year: new Date().getFullYear() })}
         </p>
       </div>
     </footer>

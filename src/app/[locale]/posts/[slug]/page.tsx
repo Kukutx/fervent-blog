@@ -7,11 +7,11 @@ export const metadata: Metadata = {
 };
 
 type PostPageProps = {
-  readonly params: Promise<{ slug: string }>;
+  readonly params: { slug: string };
 };
 
 const PostPage = async ({ params }: PostPageProps) => {
-  const { slug } = await params;
+  const { slug } = params;
 
   return <PostViewer slug={slug} />;
 };

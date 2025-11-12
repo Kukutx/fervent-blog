@@ -2,33 +2,13 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 const experience = [
-  {
-    company: "Nebula Collective",
-    role: "Lead Product Designer",
-    period: "2022 — Present",
-    description:
-      "Leading cross-functional pods to craft immersive editorial experiences and data storytelling products.",
-  },
-  {
-    company: "Studio Lumen",
-    role: "Senior UX Engineer",
-    period: "2018 — 2022",
-    description:
-      "Prototyped motion-rich interfaces, shipped design systems and bridged design with engineering teams.",
-  },
+  { key: "nebula" },
+  { key: "lumen" },
 ];
 
 const education = [
-  {
-    school: "Parsons School of Design",
-    degree: "MFA Design + Technology",
-    year: "2018",
-  },
-  {
-    school: "Tongji University",
-    degree: "BDes Industrial Design",
-    year: "2015",
-  },
+  { key: "parsons" },
+  { key: "tongji" },
 ];
 
 export const metadata: Metadata = {
@@ -56,38 +36,54 @@ const ResumePage = async () => {
       </header>
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold uppercase tracking-[0.3em] text-muted">Experience</h2>
+          <h2 className="text-lg font-semibold uppercase tracking-[0.3em] text-muted">
+            {t("resume.experienceTitle")}
+          </h2>
           <div className="space-y-4">
             {experience.map((item) => (
               <article
-                key={item.company}
+                key={item.key}
                 className="rounded-3xl border border-white/10 bg-background/70 p-6"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold text-white/90">{item.company}</h3>
+                  <h3 className="text-xl font-semibold text-white/90">
+                    {t(`resume.experience.${item.key}.company`)}
+                  </h3>
                   <span className="text-xs uppercase tracking-[0.3em] text-muted">
-                    {item.period}
+                    {t(`resume.experience.${item.key}.period`)}
                   </span>
                 </div>
-                <p className="text-sm text-accent">{item.role}</p>
-                <p className="mt-3 text-sm text-muted">{item.description}</p>
+                <p className="text-sm text-accent">
+                  {t(`resume.experience.${item.key}.role`)}
+                </p>
+                <p className="mt-3 text-sm text-muted">
+                  {t(`resume.experience.${item.key}.description`)}
+                </p>
               </article>
             ))}
           </div>
         </div>
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold uppercase tracking-[0.3em] text-muted">Education</h2>
+          <h2 className="text-lg font-semibold uppercase tracking-[0.3em] text-muted">
+            {t("resume.educationTitle")}
+          </h2>
           <div className="space-y-4">
             {education.map((item) => (
               <article
-                key={item.school}
+                key={item.key}
                 className="rounded-3xl border border-white/10 bg-background/70 p-6"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold text-white/90">{item.school}</h3>
-                  <span className="text-xs uppercase tracking-[0.3em] text-muted">{item.year}</span>
+                  <h3 className="text-xl font-semibold text-white/90">
+                    {t(`resume.education.${item.key}.school`)}
+                  </h3>
+                  <span className="text-xs uppercase tracking-[0.3em] text-muted">
+                    {t(`resume.education.${item.key}.year`)}
+                  </span>
                 </div>
-                <p className="text-sm text-accent">{item.degree}</p>
+                <p className="text-sm text-accent">
+                  {t(`resume.education.${item.key}.degree`)}
+                </p>
               </article>
             ))}
           </div>

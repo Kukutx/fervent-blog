@@ -7,14 +7,14 @@ import { getMessages } from "@/lib/i18n/get-messages";
 
 type LocaleLayoutProps = {
   readonly children: ReactNode;
-  readonly params: Promise<{ locale: string }>;
+  readonly params: { locale: string };
 };
 
 export const generateStaticParams = () =>
   locales.map((locale) => ({ locale }));
 
 const LocaleLayout = async ({ children, params }: LocaleLayoutProps) => {
-  const { locale } = await params;
+  const { locale } = params;
   const messages = await getMessages(locale);
 
   return (

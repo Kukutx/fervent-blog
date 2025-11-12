@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { useMemo } from "react";
 
 import { Post } from "@/lib/posts";
@@ -11,6 +12,7 @@ type PostListProps = {
 };
 
 export const PostList = ({ posts, selectedPost, onSelect }: PostListProps) => {
+  const locale = useLocale();
   const sortedPosts = useMemo(
     () =>
       [...posts].sort(
@@ -37,7 +39,11 @@ export const PostList = ({ posts, selectedPost, onSelect }: PostListProps) => {
             }`}
           >
             <p className="text-xs uppercase tracking-[0.4em] text-accent">
-              {post.locale.toUpperCase()} · {post.publishedAt.toDate().toLocaleDateString()}
+              {post.locale.toUpperCase()} ·
+              {" "}
+              {post.publishedAt
+                .toDate()
+                .toLocaleDateString(locale)}
             </p>
             <h3 className="mt-2 text-lg font-semibold text-white/90">{post.title}</h3>
             <p className="mt-2 text-sm text-muted">{post.summary}</p>

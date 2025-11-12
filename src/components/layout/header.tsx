@@ -57,9 +57,7 @@ export const Header = () => {
   );
 
   const renderLinks = (mobile = false) => (
-    <nav
-      className={`flex ${mobile ? "flex-col gap-4" : "items-center gap-6"}`}
-    >
+    <nav className={`flex ${mobile ? "flex-col gap-4" : "items-center gap-6"}`}>
       {navigation.map(({ href, label }) => (
         <Link
           key={href}
@@ -90,7 +88,7 @@ export const Header = () => {
           <LocaleSwitcher />
           <button
             type="button"
-            aria-label="toggle theme"
+            aria-label={t("common.toggleTheme")}
             className="rounded-full border border-white/20 p-2 text-sm text-muted transition hover:border-accent hover:text-accent"
             onClick={handleToggleTheme}
           >
@@ -111,7 +109,7 @@ export const Header = () => {
           onClick={() => setMenuOpen((current) => !current)}
         >
           <Menu size={18} />
-          Menu
+          {t("common.menu")}
         </button>
       </div>
       {menuOpen ? (

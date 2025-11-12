@@ -76,7 +76,7 @@ export const PostForm = ({
       onReset();
     } catch (cause) {
       console.error(cause);
-      setError((cause as Error).message ?? "Unknown error");
+      setError((cause as Error).message ?? t("admin.error.unknown"));
     } finally {
       setLoading(false);
     }
@@ -92,7 +92,7 @@ export const PostForm = ({
       onReset();
     } catch (cause) {
       console.error(cause);
-      setError((cause as Error).message ?? "Unknown error");
+      setError((cause as Error).message ?? t("admin.error.unknown"));
     } finally {
       setLoading(false);
     }
